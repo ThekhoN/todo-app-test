@@ -1,4 +1,4 @@
-# custom production ready webpack-hot-react boilerplate
+# todo app - TDD - jest, enzyme (e2e with cypress.io #TODO)
 
 npm install
 

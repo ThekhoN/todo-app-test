@@ -13,7 +13,7 @@
   "scripts": {
     "prod":
       "cross-env NODE_ENV=production BABEL_ENV=production rimraf dist && webpack --config config/webpack.config.prod.js -p",
-    "test-deploy": "node test-deploy",
+    "test-deploy": "node scripts/test-deploy",
     "start": "npm run dev",
     "dev":
       "cross-env NODE_ENV=development BABEL_ENV=development webpack-dev-server --config config/webpack.config.dev.js --hot --history-api-fallback --open",
@@ -22,7 +22,7 @@
     "test:watch":
       "cross-env NODE_ENV=testing BABEL_ENV=testing jest --config package.json --watch",
     "test:coverage": "npm run test --coverage",
-    "env": "cross-env NODE_ENV=testing BABEL_ENV=testing node env.js"
+    "env": "cross-env NODE_ENV=testing BABEL_ENV=testing node scripts/env.js"
   },
   "author": "",
   "license": "ISC",
