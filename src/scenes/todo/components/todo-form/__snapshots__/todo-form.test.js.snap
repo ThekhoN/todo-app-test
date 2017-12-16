@@ -20,13 +20,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <TodoInput />,
-        <button
+        <TodoInput
+          onChange={[Function]}
+        />,
+        <AddToDoButton
           onClick={[Function]}
-          type="submit"
-        >
-          add todo
-        </button>,
+        />,
       ],
       "className": "todo-form",
       "onSubmit": [Function],
@@ -36,8 +35,10 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "class",
+        "props": Object {
+          "onChange": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -45,15 +46,13 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "function",
         "props": Object {
-          "children": "add todo",
           "onClick": [Function],
-          "type": "submit",
         },
         "ref": null,
-        "rendered": "add todo",
-        "type": "button",
+        "rendered": null,
+        "type": [Function],
       },
     ],
     "type": "form",
@@ -65,13 +64,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <TodoInput />,
-          <button
+          <TodoInput
+            onChange={[Function]}
+          />,
+          <AddToDoButton
             onClick={[Function]}
-            type="submit"
-          >
-            add todo
-          </button>,
+          />,
         ],
         "className": "todo-form",
         "onSubmit": [Function],
@@ -81,8 +79,10 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "class",
+          "props": Object {
+            "onChange": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -90,15 +90,13 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "function",
           "props": Object {
-            "children": "add todo",
             "onClick": [Function],
-            "type": "submit",
           },
           "ref": null,
-          "rendered": "add todo",
-          "type": "button",
+          "rendered": null,
+          "type": [Function],
         },
       ],
       "type": "form",

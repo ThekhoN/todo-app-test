@@ -1,0 +1,14 @@
+import React from "react";
+import TodoList from "./index";
+import { shallow } from "enzyme";
+
+describe("TodoList", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(<TodoList />);
+  });
+
+  //   it("renders a ul with class todo list", () => {
+  //       expect(wrapper)
+  //   })
+});

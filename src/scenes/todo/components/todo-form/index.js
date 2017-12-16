@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TodoInput from "../todo-input";
 import { PropTypes } from "prop-types";
+import TodoSubmitButton from "../todo-submit-button";
 
 class TodoForm extends Component {
   constructor() {
@@ -8,15 +9,15 @@ class TodoForm extends Component {
     this.state = {
       value: ""
     };
+    this.onInputChange = this.onInputChange.bind(this);
   }
+  onInputChange() {}
   render() {
     const { onSubmit } = this.props;
     return (
       <form className="todo-form" onSubmit={onSubmit}>
-        <TodoInput />
-        <button type="submit" onClick={onSubmit}>
-          add todo
-        </button>
+        <TodoInput onChange={this.onInputChange} />
+        <TodoSubmitButton onClick={onSubmit} />
       </form>
     );
   }

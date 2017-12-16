@@ -1,19 +1,15 @@
 import React from "react";
 import TodoForm from "./index";
 import renderer from "react-test-renderer";
-import { shallow } from "enzyme";
+import { shallow, mount, render } from "enzyme";
+import TodoInput from "../todo-input";
 
 describe("TodoForm", () => {
-  let wrapper, onSubmit;
+  let wrapper, wrapperMounted, onSubmit;
   beforeEach(() => {
     onSubmit = jest.fn();
     wrapper = shallow(<TodoForm onSubmit={onSubmit} />);
-  });
-
-  it("renders a form with class todo-form", () => {
-    expect(
-      wrapper.contains(<form className="todo-form" onSubmit={onSubmit} />)
-    );
+    wrapperMounted = mount(<TodoForm onSubmit={onSubmit} />);
   });
 
   it("snapshots correctly", () => {
@@ -25,9 +21,17 @@ describe("TodoForm", () => {
     expect(onSubmit).toBeCalled();
   });
 
-  it("runs onSubmit on click submit button", () => {
-    const submitButton = wrapper.find("button");
-    submitButton.simulate("click");
+  it("runs onSubmit on click of TodoSubmitButton", () => {
+    const todoSubmitButton = wrapperMounted.find("button");
+    todoSubmitButton.simulate("click");
     expect(onSubmit).toBeCalled();
+  });
+
+  it("onInputChange", () => {
+    wrapperMounted.instance().onInputChange = jest.fn();
+    wrapperMounted.instance().forceUpdate();
+    // wrapperMounted.update();
+    wrapperMounted.find("input.todo-input").simulate("change");
+    expect(wrapperMounted.instance().onInputChange).toBeCalled();
   });
 });
