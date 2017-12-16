@@ -16,6 +16,10 @@ describe("TodoForm", () => {
     );
   });
 
+  it("snapshots correctly", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it("onSubmit runs form submit", () => {
     wrapper.simulate("submit");
     expect(onSubmit).toBeCalled();
