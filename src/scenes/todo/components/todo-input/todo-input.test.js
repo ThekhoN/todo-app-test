@@ -1,6 +1,6 @@
 import React from "react";
 import TodoInput from "./index";
-import { mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 
 describe("TodoInput", () => {
   let wrapperMounted, onChange;
@@ -22,31 +22,10 @@ describe("TodoInput", () => {
     expect(onChange).toBeCalled();
   });
 
-  /************************************************/
-  // TEST FAILED - component focuses on mount
-  /************************************************/
-  /*
-  it("focuses on mount", () => {
-    wrapperMounted.instance().autoFocus = jest.fn();
-    // wrapperMounted.unmount();
-    // wrapperMounted.mount();
-    wrapperMounted.instance().forceUpdate();
-    wrapperMounted.update();
-    expect(wrapperMounted.instance().autoFocus).toBeCalled();
+  // good to go for Class Component -> calling this.autoFocus on CDM
+  it("calls this.autoFocus on componentDidMount", () => {
+    const spyAutoFocus = jest.spyOn(TodoInput.prototype, "autoFocus");
+    const wrapperMounted = mount(<TodoInput onChange={onChange} />);
+    expect(spyAutoFocus).toHaveBeenCalled();
   });
-
-  // it("focuses on mount", () => {
-  //   const wrapperMounted = mount(<TodoInput onChange={onChange} />);
-  //   const focusedElement = document.activeElement;
-  //   // console.log("focusedElement: ", focusedElement);
-
-  //   expect(wrapperMounted.matchesElement(focusedElement)).toEqual(true);
-  // });
-
-  // it("has focus attribute", () => {
-  //   const wrapperMounted = mount(<TodoInput onChange={onChange} />);
-  //   expect(wrapperMounted.props.focus).toBe(true);
-  // });
-  
-  */
 });
