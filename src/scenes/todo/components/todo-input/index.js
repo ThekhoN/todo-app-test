@@ -1,18 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-// const TodoInput = ({ onChange }) => {
-//   return (
-//     <input
-//       type="text"
-//       className="todo-input"
-//       autoFocus
-//       placeholder="do something..."
-//       onChange={onChange}
-//     />
-//   );
-// };
-
 class TodoInput extends Component {
   constructor() {
     super();

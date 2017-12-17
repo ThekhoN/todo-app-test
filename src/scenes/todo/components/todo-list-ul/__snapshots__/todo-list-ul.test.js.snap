@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList matches snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TodoListUl
+    todoData={
+      Array [
+        Object {
+          "id": 1,
+          "status": "doing",
+          "text": "Implement React Tests",
+        },
+        Object {
+          "id": 2,
+          "status": "to do",
+          "text": "Cook",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <TodoListLi
+          todoObj={
+            Object {
+              "id": 1,
+              "status": "doing",
+              "text": "Implement React Tests",
+            }
+          }
+        />,
+        <TodoListLi
+          todoObj={
+            Object {
+              "id": 2,
+              "status": "to do",
+              "text": "Cook",
+            }
+          }
+        />,
+      ],
+      "className": "todo-list-ul",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "function",
+        "props": Object {
+          "todoObj": Object {
+            "id": 1,
+            "status": "doing",
+            "text": "Implement React Tests",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "function",
+        "props": Object {
+          "todoObj": Object {
+            "id": 2,
+            "status": "to do",
+            "text": "Cook",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "ul",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <TodoListLi
+            todoObj={
+              Object {
+                "id": 1,
+                "status": "doing",
+                "text": "Implement React Tests",
+              }
+            }
+          />,
+          <TodoListLi
+            todoObj={
+              Object {
+                "id": 2,
+                "status": "to do",
+                "text": "Cook",
+              }
+            }
+          />,
+        ],
+        "className": "todo-list-ul",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "function",
+          "props": Object {
+            "todoObj": Object {
+              "id": 1,
+              "status": "doing",
+              "text": "Implement React Tests",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "function",
+          "props": Object {
+            "todoObj": Object {
+              "id": 2,
+              "status": "to do",
+              "text": "Cook",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "ul",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
