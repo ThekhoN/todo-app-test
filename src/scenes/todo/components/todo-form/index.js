@@ -11,7 +11,10 @@ class TodoForm extends Component {
     };
     this.onInputChange = this.onInputChange.bind(this);
   }
-  onInputChange() {}
+  onInputChange(e) {
+    const value = e.target.value;
+    console.log(`User text input: ${value}`);
+  }
   render() {
     const { onSubmit } = this.props;
     return (
