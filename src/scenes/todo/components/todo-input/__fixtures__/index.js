@@ -6,7 +6,7 @@ export default {
     value: "",
     onChange: e => {
       const value = e.target.value;
-      console.log(`User text input: ${value}`);
+      console.log(`TodoInput onChange: ${value}`);
     }
   }
 };

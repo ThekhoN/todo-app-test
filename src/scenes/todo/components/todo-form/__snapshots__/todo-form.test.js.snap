@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TodoForm snapshots correctly 1`] = `
+exports[`TodoForm matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -24,6 +24,7 @@ ShallowWrapper {
           onChange={[Function]}
         />,
         <AddToDoButton
+          labelText="Add Todo"
           onClick={[Function]}
         />,
       ],
@@ -48,6 +49,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "labelText": "Add Todo",
           "onClick": [Function],
         },
         "ref": null,
@@ -68,6 +70,7 @@ ShallowWrapper {
             onChange={[Function]}
           />,
           <AddToDoButton
+            labelText="Add Todo"
             onClick={[Function]}
           />,
         ],
@@ -92,6 +95,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "labelText": "Add Todo",
             "onClick": [Function],
           },
           "ref": null,
