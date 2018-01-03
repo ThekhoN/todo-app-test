@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TodoListLi matches snapshot 1`] = `
+exports[`Header matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <TodoListLi
-    todoObj={
-      Object {
-        "text": "Motherfucker!!!",
-      }
-    }
+  Symbol(enzyme.__unrendered__): <Header
+    title="Hello World!"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -23,12 +19,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Motherfucker!!!",
-      "className": "todo-list-li",
+      "children": "Hello World!",
     },
     "ref": null,
-    "rendered": "Motherfucker!!!",
-    "type": "li",
+    "rendered": "Hello World!",
+    "type": "h2",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -36,12 +31,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Motherfucker!!!",
-        "className": "todo-list-li",
+        "children": "Hello World!",
       },
       "ref": null,
-      "rendered": "Motherfucker!!!",
-      "type": "li",
+      "rendered": "Hello World!",
+      "type": "h2",
     },
   ],
   Symbol(enzyme.__options__): Object {

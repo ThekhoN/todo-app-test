@@ -9,35 +9,35 @@ import { AppContainer } from "react-hot-loader";
 import Scenes from "./scenes";
 
 // check localStorage for authentication
-if (window.localStorage) {
-    const user = localStorage.getItem("user");
-    if (user) {
-        store.dispatch({
-            type: "AUTH_USER",
-            payload: user
-        });
-    } else {
-        store.dispatch({ type: "UNAUTH_USER" });
-    }
-}
+// if (window.localStorage) {
+//     const user = localStorage.getItem("user");
+//     if (user) {
+//         store.dispatch({
+//             type: "AUTH_USER",
+//             payload: user
+//         });
+//     } else {
+//         store.dispatch({ type: "UNAUTH_USER" });
+//     }
+// }
 
 const render = Component => {
-    ReactDOM.render(
-        <AppContainer>
-            <Provider store={store}>
-                <Router>
-                    <Component />
-                </Router>
-            </Provider>
-        </AppContainer>,
-        document.getElementById("root")
-    );
+  ReactDOM.render(
+    <AppContainer>
+      <Provider store={store}>
+        <Router>
+          <Component />
+        </Router>
+      </Provider>
+    </AppContainer>,
+    document.getElementById("root")
+  );
 };
 
 render(Scenes);
 
 if (module.hot) {
-    module.hot.accept("./scenes", () => {
-        render(Scenes);
-    });
+  module.hot.accept("./scenes", () => {
+    render(Scenes);
+  });
 }

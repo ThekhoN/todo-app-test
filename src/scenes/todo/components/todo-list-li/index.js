@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import fixture from "./__fixtures__";
 
 const TodoListLi = ({ todoObj }) => {
   return <li className="todo-list-li">{todoObj.text}</li>;

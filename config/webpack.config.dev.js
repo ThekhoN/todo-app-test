@@ -74,6 +74,13 @@ module.exports = {
             options: {
               sourceMap: true
             }
+          },
+          {
+            loader: "sass-resources-loader",
+            options: {
+              // make global scss varibles available to all .scss without manually importing
+              resources: ["./src/styles-global/_partials/variables.scss"]
+            }
           }
         ]
       },
