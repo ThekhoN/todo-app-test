@@ -1,17 +1,17 @@
 import React from "react";
 import { shallow, mount } from "enzyme";
-import AddTodoButton from "./index";
+import TodoSubmitButton from "../index";
+import { labelText } from "./__fixtures__";
 
-describe("AddTodoButton", () => {
-  let wrapper, onClick, labelText;
+describe("TodoSubmitButton", () => {
+  let wrapper, onClick;
   beforeEach(() => {
     onClick = jest.fn();
-    labelText = "Add Todo";
     wrapper = shallow(
-      <AddTodoButton onClick={onClick} labelText={labelText} />
+      <TodoSubmitButton onClick={onClick} labelText={labelText} />
     );
   });
-  it("snapshots correctly", () => {
+  it("matches snapshot", () => {
     expect(wrapper).toMatchSnapshot();
   });
   it("runs onClick on click", () => {

@@ -1,9 +1,11 @@
-import TodoSubmitButton from "../index";
+import TodoSubmitButton from "../../index";
+
+export const labelText = "Add Todo";
 
 export default {
   component: TodoSubmitButton,
   props: {
-    labelText: "Add Todo",
+    labelText,
     onClick: e => {
       console.log("TodoSubmitButton was clicked");
     }

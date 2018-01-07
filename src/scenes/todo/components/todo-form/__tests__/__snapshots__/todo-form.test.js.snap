@@ -23,7 +23,7 @@ ShallowWrapper {
         <TodoInput
           onChange={[Function]}
         />,
-        <AddToDoButton
+        <TodoSubmitButton
           labelText="Add Todo"
           onClick={[Function]}
         />,
@@ -69,7 +69,7 @@ ShallowWrapper {
           <TodoInput
             onChange={[Function]}
           />,
-          <AddToDoButton
+          <TodoSubmitButton
             labelText="Add Todo"
             onClick={[Function]}
           />,

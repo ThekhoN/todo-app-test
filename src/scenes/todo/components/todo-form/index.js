@@ -10,22 +10,22 @@ class TodoForm extends Component {
       value: ""
     };
     this.onInputChange = this.onInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
   onInputChange(e) {
     const value = e.target.value;
     console.log(`TodoForm onInputChange: ${value}`);
   }
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.onSubmit();
-  }
+  //   handleSubmit(e) {
+  //     e.preventDefault();
+  //     this.props.onSubmit();
+  //   }
   render() {
     const { onSubmit } = this.props;
     return (
-      <form className="todo-form" onSubmit={this.handleSubmit}>
+      <form className="todo-form" onSubmit={onSubmit}>
         <TodoInput onChange={this.onInputChange} />
-        <TodoSubmitButton onClick={this.handleSubmit} labelText="Add Todo" />
+        <TodoSubmitButton onClick={onSubmit} labelText="Add Todo" />
       </form>
     );
   }

@@ -1,7 +1,7 @@
-import TodoListLi from "../index";
+import TodoListLi from "../../index";
 
 export const todoObj = {
-  text: "Motherfucker!!!"
+  text: "Hello world!!!"
 };
 
 export default {

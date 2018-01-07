@@ -1,12 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddTodoButton snapshots correctly 1`] = `
+exports[`TodoListLi matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <AddToDoButton
-    labelText="Add Todo"
-    onClick={[Function]}
+  Symbol(enzyme.__unrendered__): <TodoListLi
+    todoObj={
+      Object {
+        "text": "Hello world!!!",
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,12 +23,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Add Todo",
-      "onClick": [Function],
+      "children": "Hello world!!!",
+      "className": "todo-list-li",
     },
     "ref": null,
-    "rendered": "Add Todo",
-    "type": "button",
+    "rendered": "Hello world!!!",
+    "type": "li",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -33,12 +36,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Add Todo",
-        "onClick": [Function],
+        "children": "Hello world!!!",
+        "className": "todo-list-li",
       },
       "ref": null,
-      "rendered": "Add Todo",
-      "type": "button",
+      "rendered": "Hello world!!!",
+      "type": "li",
     },
   ],
   Symbol(enzyme.__options__): Object {

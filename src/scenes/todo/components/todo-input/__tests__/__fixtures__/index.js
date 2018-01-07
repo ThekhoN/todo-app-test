@@ -1,4 +1,4 @@
-import TodoInput from "../index";
+import TodoInput from "../../index";
 
 export default {
   component: TodoInput,

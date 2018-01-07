@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import TodoListLi from "./index";
+import TodoListLi from "../index";
 import { todoObj } from "./__fixtures__";
 
 describe("TodoListLi", () => {
