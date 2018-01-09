@@ -6,12 +6,22 @@
 		"transform": {
 			"^.+\\.js?$": "babel-jest"
 		},
-		"roots": ["<rootDir>/src"],
+		"roots": [
+			"<rootDir>/src"
+		],
 		"setupTestFrameworkScriptFile": "<rootDir>/config/jest.setup-tests.js",
-		"testPathIgnorePatterns": ["<rootDir>/node_modules", "__fixtures__"],
+		"testPathIgnorePatterns": [
+			"<rootDir>/node_modules",
+			"__fixtures__"
+		],
 		"collectCoverage": true,
-		"coverageReporters": ["html"],
-		"collectCoverageFrom": ["**/components/**", "!**/__tests__/**"],
+		"coverageReporters": [
+			"html"
+		],
+		"collectCoverageFrom": [
+			"**/components/**",
+			"!**/__tests__/**"
+		],
 		"globals": {
 			"statements": 50,
 			"branches": 50,
@@ -20,19 +30,17 @@
 		}
 	},
 	"scripts": {
-		"prod":
-			"cross-env NODE_ENV=production BABEL_ENV=production rimraf dist && webpack --config config/webpack.config.prod.js -p",
+		"prod": "cross-env NODE_ENV=production BABEL_ENV=production rimraf dist && webpack --config config/webpack.config.prod.js -p",
 		"test-deploy": "node scripts/test-deploy",
 		"start": "npm run dev",
-		"dev":
-			"cross-env NODE_ENV=development BABEL_ENV=development webpack-dev-server --config config/webpack.config.dev.js --hot --history-api-fallback --open",
+		"dev": "cross-env NODE_ENV=development BABEL_ENV=development webpack-dev-server --config config/webpack.config.dev.js --hot --history-api-fallback --open",
 		"test": "cross-env NODE_ENV=testing BABEL_ENV=testing jest",
 		"test:watch": "cross-env NODE_ENV=testing BABEL_ENV=testing jest --watch",
-		"test:coverage":
-			"cross-env NODE_ENV=testing BABEL_ENV=testing jest --coverage",
+		"test:coverage": "cross-env NODE_ENV=testing BABEL_ENV=testing jest --coverage",
 		"env": "cross-env NODE_ENV=testing BABEL_ENV=testing node scripts/env.js",
 		"cosmos": "cosmos",
-		"cosmos:export": "cosmos-export"
+		"cosmos:export": "cosmos-export",
+		"flow": "flow"
 	},
 	"author": "",
 	"license": "ISC",
@@ -49,22 +57,28 @@
 	},
 	"devDependencies": {
 		"autoprefixer": "^7.1.6",
+		"babel-cli": "^6.26.0",
 		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.1.2",
 		"babel-jest": "^21.2.0",
 		"babel-loader": "^6.4.1",
 		"babel-plugin-transform-object-rest-spread": "^6.26.0",
 		"babel-polyfill": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
 		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-flow": "^6.23.0",
 		"babel-preset-react": "^6.24.1",
 		"cross-env": "^5.1.1",
 		"css-hot-loader": "^1.3.4",
 		"css-loader": "^0.28.7",
+		"cypress": "^1.4.1",
 		"enzyme": "^3.2.0",
 		"enzyme-adapter-react-16": "^1.1.0",
 		"eslint": "^4.15.0",
+		"eslint-plugin-flowtype": "^2.41.0",
 		"eslint-plugin-react": "^7.5.1",
 		"extract-text-webpack-plugin": "^3.0.2",
+		"flow-bin": "^0.63.1",
 		"html-webpack-plugin": "^2.30.1",
 		"img-loader": "^2.0.0",
 		"jest": "^21.2.1",

@@ -1,16 +1,16 @@
 {
-  "env": {
-    "testing": {
-      "presets": ["env", "react"],
-      "plugins": ["transform-object-rest-spread"]
-    },
-    "development": {
-      "presets": [["env", { "modules": false }], "react"],
-      "plugins": ["react-hot-loader/babel", "transform-object-rest-spread"]
-    },
-    "production": {
-      "presets": ["env", "react"],
-      "plugins": ["transform-object-rest-spread"]
-    }
-  }
+	"env": {
+		"testing": {
+			"presets": ["flow", "env", "react"],
+			"plugins": ["transform-object-rest-spread"]
+		},
+		"development": {
+			"presets": ["flow", ["env", { "modules": false }], "react"],
+			"plugins": ["react-hot-loader/babel", "transform-object-rest-spread"]
+		},
+		"production": {
+			"presets": ["flow", "env", "react"],
+			"plugins": ["transform-object-rest-spread"]
+		}
+	}
 }

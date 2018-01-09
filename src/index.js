@@ -22,22 +22,22 @@ import Scenes from "./scenes";
 // }
 
 const render = Component => {
-  ReactDOM.render(
-    <AppContainer>
-      <Provider store={store}>
-        <Router>
-          <Component />
-        </Router>
-      </Provider>
-    </AppContainer>,
-    document.getElementById("root")
-  );
+	ReactDOM.render(
+		<AppContainer>
+			<Provider store={store}>
+				<Router>
+					<Component />
+				</Router>
+			</Provider>
+		</AppContainer>,
+		document.getElementById("root")
+	);
 };
 
 render(Scenes);
 
 if (module.hot) {
-  module.hot.accept("./scenes", () => {
-    render(Scenes);
-  });
+	module.hot.accept("./scenes", () => {
+		render(Scenes);
+	});
 }
