@@ -131,6 +131,30 @@ Tests,
  console.log(wrapperMounted.instance().props.defaultValue === "stop");
 ```
 
+### settings jest.spyOn(Component.prototype, "componentFunct") before mounting
+example:
+```
+it("runs updateName on change of input[placeholder='Apple ID']", () => {
+		const spyUpdateName = jest.spyOn(Login.prototype, "updateName");
+		const wrapperMounted = mount(
+			<Provider store={store}>
+				<MemoryRouter initialEntries={["/login"]}>
+					<Login
+						error=""
+						user={unAuthedUser}
+						initAuthUser={initAuthUser}
+					/>
+				</MemoryRouter>
+			</Provider>
+		);
+
+		wrapperMounted.find("input[placeholder='Apple ID']").simulate("change");
+		expect(spyUpdateName).toHaveBeenCalled();
+	});
+```
+
+
+
 ## REMEMBER
 
 * Ensure the Component is Unit-testable else break it
